@@ -39,13 +39,7 @@ header {
   font-weight: bold;
   margin-right: 6px;
 }
-footer {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  font-family: monospace;
-  color: #494949;
-}
+
 .read-more {
   text-decoration: none;
   color: #494949;
@@ -53,4 +47,12 @@ footer {
 .read-more:hover {
   text-decoration: underline;
   color: black;
+}
+
+footer {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: monospace;
+  color: #494949;
 }

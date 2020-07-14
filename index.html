@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zazen: Zen Meditation 🧘🏻‍♀️</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="/Users/didi/Documents/GitHub/zazen-timer/src/styles.css">
+  <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
+  <div class="container">
   <header>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Enso.svg/1200px-Enso.svg.png" alt="circle drawn in brushstroke" class="logo">
     <h1 class="title">Zazen</h1>
@@ -38,10 +39,17 @@
           thinking? Nonthinking. This is the art of zazen".</em
         > <a href=https://en.wikipedia.org/wiki/Zazen target="_blank" class="read-more">Read more.</a>
     </p>
-    <button type="button" class="btn btn-primary btn-lg" id="start-button">How do I start meditating? </button>
-<button type="button" class="btn btn-secondary btn-lg" id="meditation-timer">I'm ready, let's do it!</button>
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-primary btn-lg" id="start-button">How do I start meditating? </button>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-secondary btn-lg" id="meditation-timer">I'm ready, let's do it!</button>
+      </div>    
+    </div>
   </main>
   <footer>Coded by D.Bonocore</footer>
-<script src="/Users/didi/Documents/GitHub/zazen-timer/src/app.js"></script>  
+  </div>
+<script src="src/app.js"></script>  
 </body>
 </html>

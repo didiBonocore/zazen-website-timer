@@ -1,0 +1,56 @@
+body {
+  background-color: linear-gradient (to bottom, #faf6e9, #fffdf6);
+}
+
+header {
+  text-align: center;
+  color: #494949;
+}
+.logo,
+.zazen {
+  display: block;
+  margin: 0 auto;
+}
+.logo {
+  max-width: 100px;
+}
+.zazen {
+  border-radius: 4px;
+  padding-bottom: 60px;
+}
+.title {
+  font-size: 70px;
+  font-weight: bolder;
+}
+.content {
+  text-align: left;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #494949;
+  line-height: 1.5;
+  display: block;
+  font-size: 16px;
+  padding: 30px 60px;
+  margin: 60px 60px 10px;
+  border-radius: 4px;
+}
+.content:first-letter {
+  font-size: 45px;
+  line-height: 1;
+  font-weight: bold;
+  margin-right: 6px;
+}
+footer {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: monospace;
+  color: #494949;
+}
+.read-more {
+  text-decoration: none;
+  color: #494949;
+}
+.read-more:hover {
+  text-decoration: underline;
+  color: black;
+}

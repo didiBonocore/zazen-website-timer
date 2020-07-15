@@ -5,21 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zazen: Zen Meditation 🧘🏻‍♀️</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
   <div class="container">
-  <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Enso.svg/1200px-Enso.svg.png" alt="circle drawn in brushstroke" class="logo">
-    <h1 class="title">Zazen</h1>
-    <h1>座 禅</h1>
-    <h2>Seated Meditation</h2>
-    <br>
-  </header>
-  <main>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Kodo_Sawaki_Zazen.jpg" alt="correct position for zazen meditation" class="zazen">
-    <p class="main-content">
-      <strong>Zazen</strong>, literally "seated meditation" is a meditative discipline that is
+    <header>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Enso.svg/1200px-Enso.svg.png" alt="circle drawn in brushstroke" class="logo">
+      <h1 class="title">Zazen</h1>
+      <h1>座 禅</h1>
+      <h2>Seated Meditation</h2>
+      <br>
+    </header>
+    <main>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Kodo_Sawaki_Zazen.jpg" alt="correct position for zazen meditation" class="zazen">
+      <p class="main-content">
+        <strong>Zazen</strong>, literally "seated meditation" is a meditative discipline that is
         typically the primary practice of the Zen Buddhist tradition. The
         meaning and method of zazen varies from school to school, but in general
         it can be regarded as a means of insight into the nature of existence.
@@ -38,18 +40,61 @@
           >"Sitting fixedly, think of not thinking. How do you think of not
           thinking? Nonthinking. This is the art of zazen".</em
         > <a href=https://en.wikipedia.org/wiki/Zazen target="_blank" class="read-more">Read more.</a>
-    </p>
-    <div class="row">
-      <div class="col">
-        <button type="button" class="btn btn-primary btn-lg" id="start-button">How do I start meditating? </button>
+      </p>
+      <button type="button" class="btn btn-primary btn-lg beginners-button" id="start-button">How do I start meditating? </button>
+      <!--<button type="button" class="btn btn-secondary btn-lg timer-button" id="meditation-timer">I'm ready, let's do it!</button>-->
+      <p class="main-content">
+        <strong>If</strong>  you are already familiar with Zazen meditation, or just want to start meditating right away, feel free to use the meditation timer below. You can set the timer and the break to any number of minutes you wish. The recommended amount of time for beginners is 15 minutes, followed by 5 minutes of Kinhin, or walking meditation. Kinhin meditation consists of walking back-and-forth, or around the room with your eyes opened but relaxed (soft focus). Make a fist with your left hand, and cover the fist with your right hand. Place both of your hands under your diaphragm. Walk slowly, only taking the next step after the first is fully completed. The idea of kinhin is for you to keep your meditative state, but give your body a chance to move a bit and relax. Walk calmly, doing your best effort to be present and you will have done Kinhin.
+      </p>
+      <div id="meditation-timer-wrapper">
+        <div class="settings-button-container">
+          <button type="button" class="button settings-button" aria-label="settings" title="Settings">
+            <span class="fa fa-cog"></span>
+          </button>
+        </div>
+        <h3>Meditation Timer</h3>
+        <div class="modal" id="modal">
+          <div class="modal-content">
+            <div class="modal-header">Set Custom Timer (in minutes)</div>
+            <div class="modal-body">
+              <form class="settings-form">
+                <div class="form-group">
+                  <label for="work-timer-input">Meditation:</label>
+                  <input type="text" value="25" id="work-timer-input" required>
+                </div>
+                <div class="form-group">
+                  <label for="break-timer-input">Kinhin:</label>
+                  <input type="text" value="5" id="break-timer-input" required>
+                </div>
+                <p class="message error-message"><span class="fa fa-exclamation-circle fa-lg fa-fw"></span> Please enter numbers between 1 and 60.</p>
+                <div class="button-group">
+                  <input type="submit" class="button modal-button" value="Save">
+                  <input type="button" class="button modal-button cancel" value="Cancel">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="timer-card">
+          <h3 class="session">Meditation Session</h3>
+          <div class="timer"></div>
+        </div>
+        <div class="button-group timer-buttons">
+          <button type="button" class="button timer-button play-timer" aria-label="play" title="Play">
+            <span class="fa fa-play fa-lg"></span>
+          </button>
+          <button type="button" class="button timer-button pause-timer" aria-label="pause" title="Pause">
+            <span class="fa fa-pause fa-lg"></span>
+          </button>
+          <button type="button" class="button timer-button reset-timer" aria-label="reset" title="Reset">
+            <span class="fa fa-redo-alt fa-lg"></span>
+          </button>
+        </div>
+        <audio src="https://dl.dropbox.com/s/nacdk0xey4io5d8/wink-sound-effect.mp3" class="audio"></audio>
       </div>
-      <div class="col">
-        <button type="button" class="btn btn-secondary btn-lg" id="meditation-timer">I'm ready, let's do it!</button>
-      </div>    
-    </div>
-  </main>
-  <footer>Coded by D.Bonocore</footer>
+    </main>
+    <footer>Coded by D.Bonocore</footer>
   </div>
-<script src="src/app.js"></script>  
-</body>
+  <script src="src/app.js"></script>  
+  </body>
 </html>

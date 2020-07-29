@@ -27,7 +27,7 @@ function displayTimer() {
   let breakLength = JSON.parse(localStorage.getItem("breakTimer")) || 5;
   let currentMinutes = workLength;
   let currentSeconds = 0;
-  let currentSession = "Work";
+  let currentSession = "Meditation";
   let workTimer = workLength * 60;
   let breakTimer = breakLength * 60;
 
@@ -52,7 +52,7 @@ function displayTimer() {
         document.querySelector(".audio").play();
         currentMinutes = breakLength;
         currentSeconds = 0;
-        currentSession = "Break";
+        currentSession = "Kinhin";
       } else {
         if (breakTimer > 0) {
           breakTimer--;
@@ -65,7 +65,7 @@ function displayTimer() {
           breakTimer = breakLength * 60;
           currentMinutes = parseInt(breakTimer / 60, 10);
           currentSeconds = parseInt(breakTimer % 60, 10);
-          currentSession = "Work";
+          currentSession = "Meditation";
           countDown();
         }
       }
@@ -99,7 +99,7 @@ function displayTimer() {
       breakLength = breakTimerInput;
       currentMinutes = workLength;
       currentSeconds = 0;
-      currentSession = "Work";
+      currentSession = "Meditation";
       currentMinutes =
         currentMinutes < 10 ? `0${currentMinutes}` : currentMinutes;
       currentSeconds =
@@ -151,14 +151,14 @@ function displayTimer() {
       currentMinutes < 10 ? `0${currentMinutes}` : currentMinutes;
     currentSeconds =
       currentSeconds < 10 ? `0${currentSeconds}` : currentSeconds;
-    currentSession = "Work";
+    currentSession = "Meditation";
     document.querySelector(".session").innerHTML = `${currentSession} Session`;
     document.querySelector(
       ".timer"
     ).innerHTML = `${currentMinutes}:${currentSeconds}`;
     document.querySelector(".pause-timer").style.display = "none";
     document.querySelector(".play-timer").style.display = "inline-block";
-    document.title = "Pomodoro Timer";
+    document.title = "Meditation Timer";
   });
 
   document.querySelector(".settings-button").addEventListener("click", () => {
